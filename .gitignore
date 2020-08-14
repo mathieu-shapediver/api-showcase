@@ -1,0 +1,34 @@
+node_modules
+stage
+.DS_Store
+*.swp
+*.tgz
+npm-debug.log
+.vscode/settings.json
+*.zip
+
+# folders to ignore
+
+
+# files to ignore
+
+
+# put any other files you don't want to check in here,
+# such as .DS_Store (OSX), *.bak, etc.“
+.DS_Store
+*.bak
+Thumbs.db
+
+# vi backup files
+*~
+
+
+*.bkup
+
+*.glb
+*.material
+*.tag2d
+*.tag3d
+*.3dm
+*.3dmbak
+js/

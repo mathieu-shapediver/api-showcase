@@ -1,0 +1,30 @@
+{
+  "name": "shapediver-viewer-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && tsc && cpy '**/*' '!**/*.ts' ../js/ --cwd=src --no-overwrite --parents && webpack",
+    "clean": "del-cli 'dist/**/*' && del-cli 'js/**/*'"
+  },
+  "author": "ShapeDiver GmbH",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-git": "^2.10.0",
+    "gulp-gzip": "^1.4.2",
+    "gulp-s3-upload": "^1.7.3",
+    "gulp-sequence": "^1.0.0",
+    "@types/dat.gui": "^0.7.5",
+    "@types/node": "^13.13.0",
+    "@types/three": "^0.103.2",
+    "dat.gui": "^0.7.7",
+    "shapediver-types": "^1.0.76",
+    "source-map-loader": "^0.2.4"
+  }
+}
