@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>ShapeDiver Viewer v2</title>
 
     <!-- ShapeDiver Viewer -->
-    <script defer src='https://viewer.shapediver.com/v2/2.20.0/sdv.concat.min.js'></script>
-    <link rel='stylesheet' type='text/css' href='https://viewer.shapediver.com/v2/2.20.0/sdv.css'>
+    <script
+      defer
+      src="https://viewer.shapediver.com/v2/2.20.2/sdv.concat.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://viewer.shapediver.com/v2/2.20.2/sdv.css"
+    />
 
     <!-- ShapeDiver Viewer Controls and Export Modal Dialog Dependencies -->
     <!-- UIkit CSS -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css' integrity='sha256-sO/kKFCHPL4rhYHDyHC2dwGlaIBttifOfQ0ZaGLAheo=' crossorigin='anonymous' />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css"
+      integrity="sha256-sO/kKFCHPL4rhYHDyHC2dwGlaIBttifOfQ0ZaGLAheo="
+      crossorigin="anonymous"
+    />
     <!-- UIkit JS -->
-    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js' integrity='sha256-jN++RwBoYassp9qTuZDfQuptszFdL1Pm4dKZWS5KjjY=' crossorigin='anonymous'></script>
-    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js' integrity='sha256-6pktS+jePPdXx9oCn8r4hS5jR1eq0Ry7vbifYtG0LDU=' crossorigin='anonymous'></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"
+      integrity="sha256-jN++RwBoYassp9qTuZDfQuptszFdL1Pm4dKZWS5KjjY="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"
+      integrity="sha256-6pktS+jePPdXx9oCn8r4hS5jR1eq0Ry7vbifYtG0LDU="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Dat.gui -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
 
     <!-- Application bundle -->
-    <script src='dist/bundle.js'></script>
+    <script src="main.js"></script>
 
     <style>
       /* UIkit pollutes the background globally, we overrule this */
@@ -52,30 +77,45 @@
         color: grey;
         z-index: 1;
       }
-
     </style>
-</head>
+  </head>
 
-<body style='background-color: transparent;'>
-  
-  <!-- Divs for info -->
-  <div id='info-top'></div>
-  <div id='info-bottom'></div>
-  <!-- ShapeDiver Viewer Main Container -->
-  <div id='sdv-container' class='shapediver-container-flex shapediver-container-fullsize' sdv-fullscreen='true'>
-    <!-- ShapeDiver Viewer Settings Controls Container -->
-    <div id='sdv-container-settings' class='shapediver-settings-flex' style='display: none;'></div>
-    <!-- ShapeDiver Viewer Viewport Container -->
-    <div class='shapediver-viewport-flex' style='box-shadow: inset 0px 0px 0px 0px #ff0000;'>
-      <div id='sdv-container-viewport' class='shapediver-container-fullsize' style='opacity: 0;' logginglevel=0
-        messagelogginglevel=2>
+  <body style="background-color: transparent;">
+    <!-- Divs for info -->
+    <div id="info-top"></div>
+    <div id="info-bottom"></div>
+    <!-- ShapeDiver Viewer Main Container -->
+    <div
+      id="sdv-container"
+      class="shapediver-container-flex shapediver-container-fullsize"
+      sdv-fullscreen="true"
+    >
+      <!-- ShapeDiver Viewer Settings Controls Container -->
+      <div
+        id="sdv-container-settings"
+        class="shapediver-settings-flex"
+        style="display: none;"
+      ></div>
+      <!-- ShapeDiver Viewer Viewport Container -->
+      <div
+        class="shapediver-viewport-flex"
+        style="box-shadow: inset 0px 0px 0px 0px #ff0000;"
+      >
+        <div
+          id="sdv-container-viewport"
+          class="shapediver-container-fullsize"
+          style="opacity: 0;"
+          logginglevel="0"
+          messagelogginglevel="2"
+        ></div>
+        <!-- The loading icon will be created here -->
       </div>
-      <!-- The loading icon will be created here -->
+      <!-- ShapeDiver Viewer Parameter Controls Container -->
+      <div
+        id="sdv-container-controls"
+        class="shapediver-controls-flex"
+        style="display: none;"
+      ></div>
     </div>
-    <!-- ShapeDiver Viewer Parameter Controls Container -->
-    <div id='sdv-container-controls' class='shapediver-controls-flex' style='display: none;'></div>
-  </div>
-
-</body>
-
+  </body>
 </html>

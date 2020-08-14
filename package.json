@@ -1,5 +1,5 @@
 {
-  "name": "shapediver-viewer-typescript-template",
+  "name": "api-showcase",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -26,5 +26,6 @@
     "dat.gui": "^0.7.7",
     "shapediver-types": "^1.0.76",
     "source-map-loader": "^0.2.4"
-  }
+  },
+  "keywords": []
 }
