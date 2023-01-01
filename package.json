@@ -25,7 +25,7 @@
     "@types/three": "^0.103.2",
     "dat.gui": "^0.7.7",
     "shapediver-types": "^1.0.76",
-    "source-map-loader": "^0.2.4"
+    "source-map-loader": "^4.0.1"
   },
   "keywords": []
 }
